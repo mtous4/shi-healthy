@@ -1,0 +1,21 @@
+# OS generated files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+
+# Editor directories
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Node / Package managers (if added later)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Presentation boards / raw drafts
+*Presentation Board.png
