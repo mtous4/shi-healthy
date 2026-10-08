@@ -152,28 +152,66 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Mobile Drawer Toggle
-  const hamburgerBtn = document.querySelector('.hamburger-btn');
-  const mobileNav = document.querySelector('.mobile-nav');
-  const mobileCloseBtn = document.querySelector('.mobile-close-btn');
+  // Mobile Drawer Toggle - Robust handling for touch and click
+  function getMobileNav() {
+    return document.getElementById('mobile-drawer-nav') || document.querySelector('.mobile-nav');
+  }
 
   function openMobileNav() {
-    mobileNav.classList.add('open');
-    document.body.style.overflow = 'hidden';
+    const nav = getMobileNav();
+    if (nav) {
+      nav.classList.add('open');
+      nav.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('drawer-open');
+      document.body.style.overflow = 'hidden';
+    }
   }
 
   function closeMobileNav() {
-    mobileNav.classList.remove('open');
-    document.body.style.overflow = '';
+    const nav = getMobileNav();
+    if (nav) {
+      nav.classList.remove('open');
+      nav.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('drawer-open');
+      document.body.style.overflow = '';
+    }
   }
 
-  if (hamburgerBtn) hamburgerBtn.addEventListener('click', openMobileNav);
-  if (mobileCloseBtn) mobileCloseBtn.addEventListener('click', closeMobileNav);
-  if (mobileNav) {
-    mobileNav.addEventListener('click', (e) => {
-      if (e.target === mobileNav) closeMobileNav();
+  document.querySelectorAll('.hamburger-btn, #hamburger-menu-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      openMobileNav();
     });
-  }
+  });
+
+  document.querySelectorAll('.mobile-close-btn, #mobile-drawer-close').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      closeMobileNav();
+    });
+  });
+
+  document.querySelectorAll('.mobile-nav').forEach(nav => {
+    nav.addEventListener('click', (e) => {
+      if (e.target === nav) {
+        closeMobileNav();
+      }
+    });
+  });
+
+  document.querySelectorAll('.mobile-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      closeMobileNav();
+    });
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      closeMobileNav();
+    }
+  });
 
   // Smooth scroll and auto-close mobile drawer
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -397,7 +435,7 @@ document.addEventListener('DOMContentLoaded', () => {
         nextStepBtn.textContent = 'المتابعة للدفع ←';
       } else if (stepNumber === 4) {
         nextStepBtn.style.display = 'inline-flex';
-        nextStepBtn.textContent = 'تأكيد الطلب الآن 🍱';
+        nextStepBtn.textContent = 'تأكيد الطلب الآن';
       } else if (stepNumber === 5) {
         nextStepBtn.style.display = 'none';
         renderOrderConfirmation();
@@ -486,16 +524,16 @@ document.addEventListener('DOMContentLoaded', () => {
     if (counterBar) {
       let breakdownHtml = '';
       if (plan.breakdown.chicken) {
-        breakdownHtml += `<span class="counter-item">🍗 دجاج: <strong class="counter-tag" id="count-chicken">${plan.breakdown.chicken} وجبة</strong></span>`;
+        breakdownHtml += `<span class="counter-item"><span class="type-badge chicken">دجاج</span> <strong class="counter-tag" id="count-chicken">${plan.breakdown.chicken} وجبة</strong></span>`;
       }
       if (plan.breakdown.beef) {
-        breakdownHtml += `<span class="counter-item">🥩 لحمة: <strong class="counter-tag" id="count-beef">${plan.breakdown.beef} وجبة</strong></span>`;
+        breakdownHtml += `<span class="counter-item"><span class="type-badge beef">لحمة</span> <strong class="counter-tag" id="count-beef">${plan.breakdown.beef} وجبة</strong></span>`;
       }
       if (plan.breakdown.fish) {
-        breakdownHtml += `<span class="counter-item">🐟 سمك: <strong class="counter-tag" id="count-fish">${plan.breakdown.fish} وجبة</strong></span>`;
+        breakdownHtml += `<span class="counter-item"><span class="type-badge fish">سمك</span> <strong class="counter-tag" id="count-fish">${plan.breakdown.fish} وجبة</strong></span>`;
       }
       if (plan.breakdown.salad) {
-        breakdownHtml += `<span class="counter-item">🥗 سلطات: <strong class="counter-tag" id="count-salad">${plan.breakdown.salad} سلطة</strong></span>`;
+        breakdownHtml += `<span class="counter-item"><span class="type-badge salad">سلطات</span> <strong class="counter-tag" id="count-salad">${plan.breakdown.salad} سلطة</strong></span>`;
       }
 
       counterBar.innerHTML = `
@@ -653,7 +691,7 @@ document.addEventListener('DOMContentLoaded', () => {
         `المنطقة: ${checkoutState.customerInfo.area}\n` +
         `العنوان: ${checkoutState.customerInfo.address}\n` +
         `طريقة الدفع: ${paymentLabels[checkoutState.paymentMethod] || 'كاش'}\n` +
-        `أرجو تأكيد موعد بدء التوصيل. 💚`
+        `أرجو تأكيد موعد بدء التوصيل.`
       );
       waBtn.href = `https://wa.me/962770071023?text=${msg}`;
     }
@@ -705,7 +743,7 @@ document.addEventListener('DOMContentLoaded', () => {
         deliveryResultBox.style.display = 'block';
         deliveryResultBox.innerHTML = `
           <div style="background-color: var(--lime-subtle); border: 1.5px solid var(--fresh-green); padding: 16px 20px; border-radius: var(--radius-md); text-align: right;">
-            <h4 style="color: var(--primary-dark); margin-bottom: 6px; font-size: 1.1rem;">منطقة: ${val} 🚗</h4>
+            <h4 style="color: var(--primary-dark); margin-bottom: 6px; font-size: 1.1rem;">منطقة: ${val}</h4>
             <p style="font-size: 0.95rem; color: var(--text-dark); margin-bottom: 10px;">
               توصيل يومي مباشر من مطبخنا في شفا بدران لضمان وصول الوجبات طازجة وفي موعدها.
             </p>
@@ -727,7 +765,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.open-nutritionist-chat').forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
-      const text = encodeURIComponent('مرحباً، أود استشارة أخصائية التغذية في شِ هيلثي لاختيار الخطة الأنسب لاحتياجاتي ونمط حياتي. 🥗');
+      const text = encodeURIComponent('مرحباً، أود استشارة أخصائية التغذية في شِ هيلثي لاختيار الخطة الأنسب لاحتياجاتي ونمط حياتي.');
       window.open(`https://wa.me/962770071023?text=${text}`, '_blank');
     });
   });
