@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>آراء العملاء والأسئلة الشائعة | شِ هيلثي - Shi Healthy</title>
+  <meta name="description" content="تجارب المشتركين مع شِ هيلثي في عمّان وإجابات لكافة الأسئلة الشائعة حول الاشتراكات والتوصيل وطرق الدفع. اطلب استشارتك المجانية لاختيار باقتك.">
+  <meta name="theme-color" content="#123D32">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700;800&family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+  <link rel="icon" type="image/png" href="assets/images/shi_healthy_logo.png">
+</head>
+<body>
+
+  <!-- Sticky Header Navigation -->
+  <header class="site-header" id="site-header">
+    <div class="container navbar">
+      <a href="index.html" class="nav-brand" aria-label="شِ هيلثي الرئيسية">
+        <img src="assets/images/shi_healthy_logo.png" alt="شعار شِ هيلثي" class="nav-logo-img" width="50" height="50">
+        <div class="nav-brand-text">
+          <span class="brand-arabic">شِ هيلثي</span>
+          <span class="brand-english">Shi Healthy</span>
+        </div>
+      </a>
+
+      <nav class="desktop-nav" aria-label="القائمة الرئيسية">
+        <ul class="nav-links">
+          <li><a href="index.html">الرئيسية</a></li>
+          <li><a href="subscriptions.html">الاشتراكات</a></li>
+          <li><a href="meals.html">وجباتنا</a></li>
+          <li><a href="why-us.html">ليش شِ هيلثي؟</a></li>
+          <li><a href="how-it-works.html">كيف بنشتغل؟</a></li>
+          <li><a href="reviews-faq.html" class="active">آراء العملاء والأسئلة</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="tel:0770071023" class="nav-phone">
+          <span class="nav-phone-icon">📞</span>
+          <span>0770071023</span>
+        </a>
+        <button class="btn btn-primary btn-sm trigger-subscription-flow" data-plan-id="plan-m-2">
+          ابدأ اشتراكك
+        </button>
+      </div>
+
+      <button class="hamburger-btn" aria-label="فتح القائمة">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-nav">
+    <div class="mobile-nav-panel">
+      <div class="mobile-nav-header">
+        <div class="nav-brand">
+          <img src="assets/images/shi_healthy_logo.png" alt="شِ هيلثي" class="nav-logo-img">
+          <div class="nav-brand-text">
+            <span class="brand-arabic">شِ هيلثي</span>
+            <span class="brand-english">Shi Healthy</span>
+          </div>
+        </div>
+        <button class="mobile-close-btn" aria-label="إغلاق القائمة">✕</button>
+      </div>
+
+      <ul class="mobile-links">
+        <li><a href="index.html">الرئيسية</a></li>
+        <li><a href="subscriptions.html">الاشتراكات والأسعار</a></li>
+        <li><a href="meals.html">وجباتنا (المنيو)</a></li>
+        <li><a href="why-us.html">ليش شِ هيلثي؟ والأهداف</a></li>
+        <li><a href="how-it-works.html">كيف بنشتغل والتوصيل</a></li>
+        <li><a href="reviews-faq.html" class="active">آراء العملاء والأسئلة الشائعة</a></li>
+      </ul>
+
+      <div class="mobile-nav-footer">
+        <button class="btn btn-primary trigger-subscription-flow" data-plan-id="plan-m-2">
+          ابدأ اشتراكك
+        </button>
+        <a href="https://wa.me/962770071023?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D8%B4%D9%90%20%D9%87%D9%8A%D9%84%D8%AB%D9%8A%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%A7%D9%84%D8%A7%D8%B4%D8%AA%D8%B1%D8%A7%D9%83%D8%A7%D8%AA" target="_blank" class="btn btn-lime">
+          <span>💬</span> احكي معنا على واتساب
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- Subpage Banner -->
+    <section class="page-hero-banner">
+      <div class="container">
+        <div class="breadcrumb-nav">
+          <a href="index.html">الرئيسية</a>
+          <span class="breadcrumb-sep">/</span>
+          <span>آراء العملاء والأسئلة الشائعة</span>
+        </div>
+        <span class="section-tag">ثقة المشتركين والشفافية</span>
+        <h1>تجارب حقيقية وإجابات لكل أسئلتك</h1>
+        <p>اسمع من المشتركين الذين اعتمدوا شِ هيلثي كجزء من روتينهم اليومي، واطلع على إجابات واضحة لكافة استفساراتك.</p>
+      </div>
+    </section>
+
+    <!-- Social Proof Section -->
+    <section class="social-proof-section" style="padding-top: 0; background: none;">
+      <div class="container">
+        <div class="section-header text-center">
+          <h2>ما بدنا نحكيلك إحنا... اسمع من اللي جرّبوا.</h2>
+          <p>آراء مشتركينا من عمّان الذين حوّلوا روتينهم الصحي لأسلوب حياة مستمر.</p>
+        </div>
+
+        <div class="testimonials-grid">
+          <!-- Review 1 -->
+          <div class="testimonial-card">
+            <div class="testimonial-header">
+              <div class="user-info">
+                <div class="user-avatar">ع</div>
+                <div class="user-name-box">
+                  <h4>علي ج.</h4>
+                  <span>مشترك باقة وجبتين شهريًا (الجبيهة)</span>
+                </div>
+              </div>
+              <span class="whatsapp-badge-icon">💬</span>
+            </div>
+            <p class="testimonial-text">
+              "الصراحة أول مرة التزم باشتراك وما أزهق بعد أول أسبوع! الأكل بيوصل ساخن والتتبيلة بتجنن وما في إحساس الحرمان بالمرة. دجاج الترياكي والستروجونوف رائعين 💚"
+            </p>
+            <span class="testimonial-proof-tag">✓ تجربة مشترِك موثقة</span>
+          </div>
+
+          <!-- Review 2 -->
+          <div class="testimonial-card">
+            <div class="testimonial-header">
+              <div class="user-info">
+                <div class="user-avatar">س</div>
+                <div class="user-name-box">
+                  <h4>سارة القحطاني</h4>
+                  <span>مشتركة باقة وجبة يوميًا (شفا بدران)</span>
+                </div>
+              </div>
+              <span class="whatsapp-badge-icon">💬</span>
+            </div>
+            <p class="testimonial-text">
+              "كنت أضيع وقت كل يوم بالتفكير شو أطبخ للدوام، شِ هيلثي وفروا علي التعب والوجبة مشبعة ومحسوبة بالزبط على الماكروز اللي محددلي إياها الكوتش."
+            </p>
+            <span class="testimonial-proof-tag">✓ تجربة مشترِك موثقة</span>
+          </div>
+
+          <!-- Review 3 -->
+          <div class="testimonial-card">
+            <div class="testimonial-header">
+              <div class="user-info">
+                <div class="user-avatar">م</div>
+                <div class="user-name-box">
+                  <h4>محمد عبدالله</h4>
+                  <span>مشترك باقة 3 وجبات شهريًا (تلاع العلي)</span>
+                </div>
+              </div>
+              <span class="whatsapp-badge-icon">💬</span>
+            </div>
+            <p class="testimonial-text">
+              "النظافة والترتيب بالبوكسات 10/10. كمية البروتين واضحة ومكتوبة على كل علبة، والأهم الطعم فعلًا مثل الأكل المحضر في البيت بدون دهون زيادة."
+            </p>
+            <span class="testimonial-proof-tag">✓ تجربة مشترِك موثقة</span>
+          </div>
+        </div>
+
+        <div class="social-proof-footer">
+          <h3>تجربتهم هي أكبر دليل. 💚</h3>
+          <button class="btn btn-primary btn-lg trigger-subscription-flow" data-plan-id="plan-m-2">
+            جرّبها بنفسك وابدأ اشتراكك 🍱
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Accordion Section -->
+    <section class="faq-section">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">إجابات واضحة</span>
+          <h2>الأسئلة الشائعة</h2>
+          <p>كل ما ترغب بمعرفته حول نظام الاشتراكات والوجبات والتوصيل لدى شِ هيلثي.</p>
+        </div>
+
+        <div class="faq-accordion-wrap">
+          <div class="faq-item" id="faq-item-1">
+            <button class="faq-question-btn" aria-expanded="true">
+              <span>هل التوصيل شامل سعر الاشتراك؟</span>
+              <span class="faq-toggle-icon">+</span>
+            </button>
+            <div class="faq-answer-content">
+              <p>لا. تكلفة التوصيل تعتمد على منطقة التوصيل، وتتوفر أحيانًا عروض توصيل مجاني.</p>
+            </div>
+          </div>
+
+          <div class="faq-item" id="faq-item-2">
+            <button class="faq-question-btn" aria-expanded="false">
+              <span>هل أقدر أختار وجباتي؟</span>
+              <span class="faq-toggle-icon">+</span>
+            </button>
+            <div class="faq-answer-content">
+              <p>نعم، بعد اختيار الاشتراك يمكنك اختيار وجباتك من الخيارات المتاحة.</p>
+            </div>
+          </div>
+
+          <div class="faq-item" id="faq-item-3">
+            <button class="faq-question-btn" aria-expanded="false">
+              <span>هل الاشتراكات أسبوعية أم شهرية؟</span>
+              <span class="faq-toggle-icon">+</span>
+            </button>
+            <div class="faq-answer-content">
+              <p>عندنا اشتراكات أسبوعية وشهرية.</p>
+            </div>
+          </div>
+
+          <div class="faq-item" id="faq-item-4">
+            <button class="faq-question-btn" aria-expanded="false">
+              <span>هل الوجبات محسوبة السعرات والماكروز؟</span>
+              <span class="faq-toggle-icon">+</span>
+            </button>
+            <div class="faq-answer-content">
+              <p>نعم، الوجبات عند شِ هيلثي محسوبة من ناحية السعرات والماكروز.</p>
+            </div>
+          </div>
+
+          <div class="faq-item" id="faq-item-5">
+            <button class="faq-question-btn" aria-expanded="false">
+              <span>هل لازم يكون عندي هدف لخسارة الوزن؟</span>
+              <span class="faq-toggle-icon">+</span>
+            </button>
+            <div class="faq-answer-content">
+              <p>لا. الاشتراكات مناسبة لأهداف وأنماط حياة مختلفة.</p>
+            </div>
+          </div>
+
+          <div class="faq-item" id="faq-item-6">
+            <button class="faq-question-btn" aria-expanded="false">
+              <span>هل عندكم أخصائية تغذية؟</span>
+              <span class="faq-toggle-icon">+</span>
+            </button>
+            <div class="faq-answer-content">
+              <p>نعم، ويمكنك التواصل معها للمساعدة في اختيار الخطة المناسبة.</p>
+            </div>
+          </div>
+
+          <div class="faq-item" id="faq-item-7">
+            <button class="faq-question-btn" aria-expanded="false">
+              <span>هل أقدر أدفع على دفعتين؟</span>
+              <span class="faq-toggle-icon">+</span>
+            </button>
+            <div class="faq-answer-content">
+              <p>نعم، يتوفر الدفع على دفعتين وفق الاشتراك والنظام المعتمد.</p>
+            </div>
+          </div>
+
+          <div class="faq-item" id="faq-item-8">
+            <button class="faq-question-btn" aria-expanded="false">
+              <span>كيف أبدأ الاشتراك؟</span>
+              <span class="faq-toggle-icon">+</span>
+            </button>
+            <div class="faq-answer-content">
+              <p>اختار الخطة المناسبة، اختار وجباتك، أدخل بياناتك، ثم أكمل الدفع.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lead Form Section -->
+    <section class="lead-section" id="lead-form-section">
+      <div class="container">
+        <div class="lead-card-box">
+          <div class="text-center">
+            <span class="section-tag">استشارة مخصصة مجانًا</span>
+            <h2>مش متأكد أي اشتراك بناسبك؟</h2>
+            <p>خلينا نساعدك تختار الخطة الأنسب إلك ولروتينك اليومي.</p>
+          </div>
+
+          <form id="lead-consultation-form">
+            <div class="lead-form-grid">
+              <div>
+                <label for="lead-name" class="form-label">الاسم الكامل *</label>
+                <input type="text" id="lead-name" class="form-input" placeholder="مثال: أحمد محمد" required>
+              </div>
+              <div>
+                <label for="lead-phone" class="form-label">رقم الهاتف *</label>
+                <input type="tel" id="lead-phone" class="form-input" placeholder="07XXXXXXXX" required>
+              </div>
+              <div>
+                <label for="lead-goal" class="form-label">الهدف الأساسي</label>
+                <select id="lead-goal" class="form-select">
+                  <option value="خسارة وزن">خسارة وزن</option>
+                  <option value="بناء عضل">بناء عضل</option>
+                  <option value="المحافظة على الوزن">المحافظة على الوزن</option>
+                  <option value="أكل صحي">أكل صحي</option>
+                  <option value="توفير وقت">توفير وقت</option>
+                  <option value="غير ذلك">غير ذلك</option>
+                </select>
+              </div>
+              <div>
+                <label for="lead-meals" class="form-label">عدد الوجبات المرغوبة</label>
+                <select id="lead-meals" class="form-select">
+                  <option value="وجبة يوميًا">وجبة</option>
+                  <option value="وجبتين يوميًا" selected>وجبتين</option>
+                  <option value="3 وجبات يوميًا">3 وجبات</option>
+                  <option value="مش متأكد">مش متأكد</option>
+                </select>
+              </div>
+              <div class="form-group-full">
+                <label for="lead-area" class="form-label">منطقة السكن / التوصيل في عمّان</label>
+                <input type="text" id="lead-area" class="form-input" placeholder="مثال: شفا بدران، الجبيهة، عبدون...">
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary lead-submit-btn" id="lead-submit-btn">
+              ساعدني أختار الخطة الأنسب 🎯
+            </button>
+          </form>
+
+          <div class="lead-success-msg" id="lead-success-message">
+            <h4>وصلتنا معلوماتك 💚</h4>
+            <p style="margin-bottom: 16px;">رح نتواصل معك ونساعدك تختار الخطة الأنسب إلك في أقرب وقت.</p>
+            <a href="#" id="lead-whatsapp-instant" target="_blank" class="btn btn-primary btn-sm">
+              تواصل معنا مباشرة عبر واتساب
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo-row">
+          <img src="assets/images/shi_healthy_logo.png" alt="شِ هيلثي" class="footer-logo-img">
+          <div>
+            <div class="footer-brand-title">شِ هيلثي | Shi Healthy</div>
+            <div style="font-size: 0.85rem; color: var(--lime-accent);">Healthy? اه. حرمان؟ لا.</div>
+          </div>
+        </div>
+        <p class="footer-brand-desc">أكل صحي، زاكي، ومتوازن... بطريقة أسهل تناسب روتينك وأهدافك البدنية في الأردن.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>صفحات الموقع</h4>
+        <ul class="footer-links-list">
+          <li><a href="index.html">الرئيسية</a></li>
+          <li><a href="subscriptions.html">الاشتراكات والأسعار</a></li>
+          <li><a href="meals.html">وجباتنا (المنيو)</a></li>
+          <li><a href="why-us.html">ليش شِ هيلثي؟ والأهداف</a></li>
+          <li><a href="how-it-works.html">كيف بنشتغل والتوصيل</a></li>
+          <li><a href="reviews-faq.html">آراء العملاء والأسئلة الشائعة</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>معلومات التواصل</h4>
+        <div class="footer-contact-info">
+          <div class="footer-contact-row">
+            <span>📞</span>
+            <div><strong>رقم الهاتف:</strong><br><a href="tel:0770071023" style="direction: ltr; display: inline-block;">0770071023</a></div>
+          </div>
+          <div class="footer-contact-row">
+            <span>📍</span>
+            <div><strong>الموقع:</strong><br>شفا بدران، شارع العرب، عمّان</div>
+          </div>
+          <div class="footer-contact-row">
+            <span>📸</span>
+            <div><strong>انستغرام:</strong><br><a href="https://instagram.com" target="_blank" rel="noopener">@shihealthy.jo</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <div>جميع الحقوق محفوظة © 2026 شِ هيلثي | Shi Healthy</div>
+      <div>Healthy food that fits real life 🌿</div>
+    </div>
+  </footer>
+
+  <!-- Mobile Sticky Bar -->
+  <div class="mobile-sticky-bar">
+    <button class="btn btn-primary trigger-subscription-flow" data-plan-id="plan-m-2">
+      🍱 ابدأ اشتراكك
+    </button>
+    <a href="https://wa.me/962770071023?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D8%B4%D9%90%20%D9%87%D9%8A%D9%84%D8%AB%D9%8A%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%A7%D9%84%D8%A7%D8%B4%D8%AA%D8%B1%D8%A7%D9%83%D8%A7%D8%AA" target="_blank" class="mobile-whatsapp-btn" aria-label="محادثة واتساب">💬</a>
+  </div>
+
+  <a href="https://wa.me/962770071023?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D8%B4%D9%90%20%D9%87%D9%8A%D9%84%D8%AB%D9%8A%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%A7%D9%84%D8%A7%D8%B4%D8%AA%D8%B1%D8%A7%D9%83%D8%A7%D8%AA" target="_blank" class="floating-whatsapp" aria-label="احكي معنا على واتساب">💬</a>
+
+  <!-- FLOW B Modal -->
+  <div class="modal-overlay" id="checkout-modal" role="dialog" aria-modal="true" aria-labelledby="modal-step-title">
+    <div class="checkout-modal-card">
+      <div class="modal-header">
+        <h3 id="modal-step-title">طلب اشتراك جديد 🍱</h3>
+        <button class="modal-close-btn" id="modal-close-btn" aria-label="إغلاق النافذة">✕</button>
+      </div>
+
+      <div class="stepper-progress-bar">
+        <div class="step-indicator active" data-step="1"><div class="step-circle">1</div><span class="step-label">الاشتراك</span></div>
+        <div class="step-indicator" data-step="2"><div class="step-circle">2</div><span class="step-label">الوجبات</span></div>
+        <div class="step-indicator" data-step="3"><div class="step-circle">3</div><span class="step-label">البيانات</span></div>
+        <div class="step-indicator" data-step="4"><div class="step-circle">4</div><span class="step-label">الدفع</span></div>
+        <div class="step-indicator" data-step="5"><div class="step-circle">5</div><span class="step-label">التأكيد</span></div>
+      </div>
+
+      <div class="modal-body">
+        <div class="checkout-step-panel active" data-step="1">
+          <h4 style="font-size: 1.2rem; color: var(--primary-dark); margin-bottom: 6px;">الخطوة 1: حدد نوع الاشتراك</h4>
+          <p style="font-size: 0.95rem; color: var(--text-muted); margin-bottom: 16px;">اضغط على الخطة التي تناسب عدد وجباتك الشهري أو الأسبوعي:</p>
+          <div class="modal-plans-list" id="modal-plans-list-container"></div>
+        </div>
+
+        <div class="checkout-step-panel" data-step="2">
+          <h4 style="font-size: 1.2rem; color: var(--primary-dark); margin-bottom: 6px;">الخطوة 2: اختار وجباتك المفضلة</h4>
+          <p style="font-size: 0.95rem; color: var(--text-muted); margin-bottom: 16px;">حدد الوجبات التي ترغب بها، وسيقوم شيف شِ هيلثي بتجهيزها وتنسيق التوصيل حسب الخطة:</p>
+          <div class="meals-counter-bar" id="modal-meals-counter-bar"></div>
+          <div class="meals-selection-grid" id="modal-meals-grid"></div>
+        </div>
+
+        <div class="checkout-step-panel" data-step="3">
+          <h4 style="font-size: 1.2rem; color: var(--primary-dark); margin-bottom: 6px;">الخطوة 3: بيانات التوصيل والتواصل</h4>
+          <p style="font-size: 0.95rem; color: var(--text-muted); margin-bottom: 20px;">أدخل عنوانك بالتفصيل حتى يتم تنسيق خط التوصيل:</p>
+          <div class="lead-form-grid" style="margin-top: 0;">
+            <div>
+              <label for="cust-name" class="form-label">الاسم الكامل *</label>
+              <input type="text" id="cust-name" class="form-input" placeholder="اسمك الكريم" required>
+            </div>
+            <div>
+              <label for="cust-phone" class="form-label">رقم الهاتف *</label>
+              <input type="tel" id="cust-phone" class="form-input" placeholder="07XXXXXXXX" required>
+            </div>
+            <div>
+              <label for="cust-area" class="form-label">المنطقة في عمّان *</label>
+              <select id="cust-area" class="form-select" required>
+                <option value="">-- اختار منطقتك --</option>
+              </select>
+            </div>
+            <div>
+              <label for="cust-address" class="form-label">العنوان بالتفصيل *</label>
+              <input type="text" id="cust-address" class="form-input" placeholder="اسم الشارع، البناية، رقم الشقة">
+            </div>
+            <div class="form-group-full">
+              <label for="cust-notes" class="form-label">ملاحظات التوصيل أو الحساسية من أطعمة معينة</label>
+              <textarea id="cust-notes" class="form-textarea" rows="2" placeholder="أي تفاصيل خاصة بتسليم الوجبات أو تفضيلات النكهات"></textarea>
+            </div>
+          </div>
+          <div style="background-color: #FFF9E6; border: 1px solid #E5A823; padding: 10px 14px; border-radius: var(--radius-sm); font-size: 0.85rem; color: #7A5300; margin-top: 14px;">
+            * تذكير: تكلفة التوصيل لا تشمل سعر الاشتراك ويتم احتسابها بحسب المنطقة الجغرافية.
+          </div>
+        </div>
+
+        <div class="checkout-step-panel" data-step="4">
+          <h4 style="font-size: 1.2rem; color: var(--primary-dark); margin-bottom: 6px;">الخطوة 4: طريقة الدفع</h4>
+          <p style="font-size: 0.95rem; color: var(--text-muted); margin-bottom: 16px;">اختر وسيلة الدفع المعتمدة المناسبة لك:</p>
+          <div class="payment-options-list">
+            <label class="payment-option-row selected">
+              <input type="radio" name="payment_choice" value="cod" class="payment-radio" checked>
+              <div class="payment-title-wrap">
+                <h4>الدفع عند الاستلام (كاش) 💵</h4>
+                <p>تدفع عند استلام أول دفعة وجبات مباشرة للمندوب</p>
+              </div>
+            </label>
+            <label class="payment-option-row">
+              <input type="radio" name="payment_choice" value="card" class="payment-radio">
+              <div class="payment-title-wrap">
+                <h4>البطاقة الائتمانية (Visa / Mastercard) 💳</h4>
+                <p>رابط دفع إلكتروني آمن يتم إرساله إليك</p>
+              </div>
+            </label>
+            <label class="payment-option-row">
+              <input type="radio" name="payment_choice" value="cliq" class="payment-radio">
+              <div class="payment-title-wrap">
+                <h4>كليك والمحافظ الإلكترونية (CliQ / Zain Cash) 📱</h4>
+                <p>تحويل فوري عبر اسم المستخدم المعتمد</p>
+              </div>
+            </label>
+            <label class="payment-option-row">
+              <input type="radio" name="payment_choice" value="split" class="payment-radio">
+              <div class="payment-title-wrap">
+                <h4>الدفع مقسم على دفعتين 🔄</h4>
+                <p>متاح للاشتراكات الشهرية (دفعة عند البدء ودفعة في منتصف الشهر)</p>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <div class="checkout-step-panel" data-step="5">
+          <div class="order-success-box">
+            <div class="success-icon-animated">✓</div>
+            <h3 style="font-size: 1.6rem; color: var(--primary-dark); margin-bottom: 8px;">تم تسجيل طلبك بنجاح! 💚</h3>
+            <p style="font-size: 1.05rem; color: var(--text-muted);">
+              شكرًا لاختيارك <strong>شِ هيلثي</strong>. فريقنا سيقوم بمراجعة طلبك والتواصل معك لتأكيد موعد أول توصيل.
+            </p>
+            <div class="order-summary-card" id="order-summary-content"></div>
+            <div style="display: flex; flex-direction: column; gap: 12px; align-items: center;">
+              <a href="#" id="confirm-whatsapp-btn" target="_blank" class="btn btn-lime btn-lg" style="width: 100%;">
+                <span>💬</span> تأكيد الطلب مباشرة عبر واتساب
+              </a>
+              <button type="button" class="btn btn-secondary" onclick="document.getElementById('checkout-modal').classList.remove('open');">
+                إغلاق
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary btn-sm" id="modal-prev-btn" style="display: none;">
+          → السابق
+        </button>
+        <button type="button" class="btn btn-primary btn-sm" id="modal-next-btn">
+          المتابعة لاختيار الوجبات ←
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>

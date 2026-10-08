@@ -342,6 +342,17 @@ button, input, select, textarea {
   width: 100%;
 }
 
+.nav-links a.active {
+  color: var(--primary-dark);
+  font-weight: 800;
+}
+
+.nav-links a.active::after {
+  width: 100%;
+  background-color: var(--fresh-green);
+  height: 3px;
+}
+
 .nav-actions {
   display: flex;
   align-items: center;
@@ -2641,6 +2652,192 @@ button, input, select, textarea {
 }
 
 /* ==========================================================================
+   Subpage Banners & Breadcrumbs
+   ========================================================================== */
+.page-hero-banner {
+  padding: 64px 0 44px;
+  background: radial-gradient(circle at 85% 20%, rgba(183, 217, 76, 0.22) 0%, transparent 45%),
+              radial-gradient(circle at 15% 80%, rgba(84, 142, 62, 0.12) 0%, transparent 40%),
+              var(--bg-light);
+  border-bottom: 1px solid var(--border-light);
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.page-hero-banner h1 {
+  font-size: clamp(2.1rem, 3.8vw, 3.2rem);
+  color: var(--primary-dark);
+  margin-bottom: 12px;
+}
+
+.page-hero-banner p {
+  font-size: 1.2rem;
+  color: var(--text-muted);
+  max-width: 720px;
+}
+
+.breadcrumb-nav {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-bottom: 18px;
+}
+
+.breadcrumb-nav a {
+  color: var(--fresh-green);
+  font-weight: 700;
+}
+
+.breadcrumb-nav a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumb-sep {
+  opacity: 0.5;
+}
+
+/* ==========================================================================
+   Homepage Sections Gateway Cards
+   ========================================================================== */
+.sections-gateway {
+  padding: 70px 0 80px;
+  background-color: #ffffff;
+}
+
+.sections-gateway-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-top: 36px;
+}
+
+.gateway-card {
+  background-color: var(--bg-light);
+  border-radius: var(--radius-xl);
+  padding: 32px 24px;
+  border: 1.5px solid var(--border-light);
+  transition: all var(--transition-smooth);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+
+.gateway-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--fresh-green), var(--lime-accent));
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+}
+
+.gateway-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--border-green);
+  background-color: #ffffff;
+}
+
+.gateway-card:hover::before {
+  opacity: 1;
+}
+
+.gateway-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--lime-subtle) 0%, rgba(84, 142, 62, 0.15) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.9rem;
+  margin-bottom: 20px;
+}
+
+.gateway-card h3 {
+  font-size: 1.35rem;
+  color: var(--primary-dark);
+  margin-bottom: 10px;
+}
+
+.gateway-card p {
+  font-size: 0.98rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+  margin-bottom: 24px;
+  flex-grow: 1;
+}
+
+.gateway-card .btn {
+  width: 100%;
+}
+
+/* Featured Plan Banner on Homepage */
+.featured-plan-section {
+  padding: 70px 0;
+  background-color: var(--bg-light);
+}
+
+.featured-plan-box {
+  background: linear-gradient(135deg, #ffffff 0%, #FAFCF6 100%);
+  border: 2px solid var(--border-green);
+  border-radius: var(--radius-xl);
+  padding: 40px;
+  box-shadow: var(--shadow-md);
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  align-items: center;
+  gap: 36px;
+  position: relative;
+}
+
+.featured-plan-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: var(--lime-accent);
+  color: var(--primary-dark);
+  font-weight: 800;
+  font-size: 0.88rem;
+  padding: 4px 14px;
+  border-radius: var(--radius-pill);
+  margin-bottom: 12px;
+}
+
+.featured-plan-info h3 {
+  font-size: 1.8rem;
+  color: var(--primary-dark);
+  margin-bottom: 8px;
+}
+
+.featured-plan-info p {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.featured-plan-pricing {
+  text-align: center;
+  background-color: var(--bg-light);
+  border-radius: var(--radius-lg);
+  padding: 28px 24px;
+  border: 1px solid var(--border-light);
+}
+
+.featured-plan-pricing .price-main {
+  font-size: 2.8rem;
+  font-weight: 900;
+  color: var(--primary-dark);
+}
+
+/* ==========================================================================
    Responsive Breakpoints
    Desktop: 1440px | Tablet: 768-1024px | Mobile: 320-767px
    ========================================================================== */
@@ -2677,6 +2874,15 @@ button, input, select, textarea {
   
   .goals-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .sections-gateway-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .featured-plan-box {
+    grid-template-columns: 1fr;
+    gap: 24px;
   }
   
   .meals-showcase-grid {
@@ -2750,6 +2956,14 @@ button, input, select, textarea {
   
   .goals-grid {
     grid-template-columns: 1fr;
+  }
+  
+  .sections-gateway-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .featured-plan-box {
+    padding: 24px 18px;
   }
   
   .meals-showcase-grid {

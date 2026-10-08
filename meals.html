@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>قائمة الوجبات والماكروز | شِ هيلثي - Shi Healthy</title>
+  <meta name="description" content="استعرض قائمة وجبات شِ هيلثي المتنوعة في الأردن: أكثر من 35 وجبة دجاج، ستيك ولحم عجل، سلمون وجمبري، سلطات بروتين، ووجبات أردنية صحية محسوبة السعرات والماكروز.">
+  <meta name="theme-color" content="#123D32">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700;800&family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+  <link rel="icon" type="image/png" href="assets/images/shi_healthy_logo.png">
+</head>
+<body>
+
+  <!-- Sticky Header Navigation -->
+  <header class="site-header" id="site-header">
+    <div class="container navbar">
+      <a href="index.html" class="nav-brand" aria-label="شِ هيلثي الرئيسية">
+        <img src="assets/images/shi_healthy_logo.png" alt="شعار شِ هيلثي" class="nav-logo-img" width="50" height="50">
+        <div class="nav-brand-text">
+          <span class="brand-arabic">شِ هيلثي</span>
+          <span class="brand-english">Shi Healthy</span>
+        </div>
+      </a>
+
+      <nav class="desktop-nav" aria-label="القائمة الرئيسية">
+        <ul class="nav-links">
+          <li><a href="index.html">الرئيسية</a></li>
+          <li><a href="subscriptions.html">الاشتراكات</a></li>
+          <li><a href="meals.html" class="active">وجباتنا</a></li>
+          <li><a href="why-us.html">ليش شِ هيلثي؟</a></li>
+          <li><a href="how-it-works.html">كيف بنشتغل؟</a></li>
+          <li><a href="reviews-faq.html">آراء العملاء والأسئلة</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="tel:0770071023" class="nav-phone">
+          <span class="nav-phone-icon">📞</span>
+          <span>0770071023</span>
+        </a>
+        <button class="btn btn-primary btn-sm trigger-subscription-flow" data-plan-id="plan-m-2">
+          ابدأ اشتراكك
+        </button>
+      </div>
+
+      <button class="hamburger-btn" aria-label="فتح القائمة">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-nav">
+    <div class="mobile-nav-panel">
+      <div class="mobile-nav-header">
+        <div class="nav-brand">
+          <img src="assets/images/shi_healthy_logo.png" alt="شِ هيلثي" class="nav-logo-img">
+          <div class="nav-brand-text">
+            <span class="brand-arabic">شِ هيلثي</span>
+            <span class="brand-english">Shi Healthy</span>
+          </div>
+        </div>
+        <button class="mobile-close-btn" aria-label="إغلاق القائمة">✕</button>
+      </div>
+
+      <ul class="mobile-links">
+        <li><a href="index.html">الرئيسية</a></li>
+        <li><a href="subscriptions.html">الاشتراكات والأسعار</a></li>
+        <li><a href="meals.html" class="active">وجباتنا (المنيو)</a></li>
+        <li><a href="why-us.html">ليش شِ هيلثي؟ والأهداف</a></li>
+        <li><a href="how-it-works.html">كيف بنشتغل والتوصيل</a></li>
+        <li><a href="reviews-faq.html">آراء العملاء والأسئلة الشائعة</a></li>
+      </ul>
+
+      <div class="mobile-nav-footer">
+        <button class="btn btn-primary trigger-subscription-flow" data-plan-id="plan-m-2">
+          ابدأ اشتراكك
+        </button>
+        <a href="https://wa.me/962770071023?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D8%B4%D9%90%20%D9%87%D9%8A%D9%84%D8%AB%D9%8A%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%A7%D9%84%D8%A7%D8%B4%D8%AA%D8%B1%D8%A7%D9%83%D8%A7%D8%AA" target="_blank" class="btn btn-lime">
+          <span>💬</span> احكي معنا على واتساب
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- Subpage Banner -->
+    <section class="page-hero-banner">
+      <div class="container">
+        <div class="breadcrumb-nav">
+          <a href="index.html">الرئيسية</a>
+          <span class="breadcrumb-sep">/</span>
+          <span>وجباتنا والمنيو</span>
+        </div>
+        <span class="section-tag">خيارات زاكية ومتنوعة</span>
+        <h1>35 وجبة دجاج... وتنوع يغنيك عن الملل</h1>
+        <p>التزامك ما لازم يعني تكرر نفس الوجبة كل يوم. جميع وجباتنا محضرة طازجة يومياً ومحسوبة بالجرام والسعرات والماكروز لتساعدك تلتزم براحة.</p>
+      </div>
+    </section>
+
+    <!-- Food Variety & Menu Section -->
+    <section class="variety-section" style="padding-top: 0;">
+      <div class="container">
+        <!-- Visual Headline Box -->
+        <div class="variety-intro-grid" style="margin-bottom: 40px;">
+          <div class="variety-intro-text">
+            <h2>نوّع أكلك واستمتع بكل وجبة</h2>
+            <p>
+              الأكل الصحي مع <strong>شِ هيلثي</strong> تجربة يومية لذيذة. وفرنا تشكيلة واسعة من الدجاج المتبل، واللحم البقري الخالي من الدهون، والسلمون، والسلطات الغنية بالبروتين، بالإضافة للأطباق الأردنية المفضلة مثل الكبسة والملوخية المحضرة بطريقة صحية.
+            </p>
+            <div style="display: flex; gap: 14px; flex-wrap: wrap;">
+              <button class="btn btn-lime trigger-subscription-flow" data-plan-id="plan-m-2">
+                اشترك واختار وجباتك 🍱
+              </button>
+              <a href="subscriptions.html" class="btn btn-secondary">
+                عرض باقات الاشتراكات
+              </a>
+            </div>
+          </div>
+          <div class="variety-intro-img">
+            <img src="assets/images/variety_chicken.jpg" alt="تشكيلة متنوعة من وجبات الدجاج والأطباق الصحية" width="600" height="380">
+          </div>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="meal-filter-tabs">
+          <button class="filter-tab active" data-filter="all">جميع الوجبات 🍽️</button>
+          <button class="filter-tab" data-filter="chicken">وجبات الدجاج (35+ صنف) 🍗</button>
+          <button class="filter-tab" data-filter="beef">وجبات اللحم البقري 🥩</button>
+          <button class="filter-tab" data-filter="fish">السمك والمأكولات البحرية 🐟</button>
+          <button class="filter-tab" data-filter="salad">السلطات الصحية 🥗</button>
+          <button class="filter-tab" data-filter="daily">وجبات أردنية ويومية 🇯🇴</button>
+        </div>
+
+        <!-- Meals Showcase Grid -->
+        <div class="meals-showcase-grid" id="meals-grid-container">
+          <!-- Meal 1 -->
+          <div class="meal-showcase-card" data-category="chicken">
+            <div class="meal-card-img-wrap">
+              <img src="assets/images/hero_dish.jpg" alt="دجاج مشوي بالأعشاب" loading="lazy">
+              <span class="meal-tag-category">دجاج مشوي</span>
+            </div>
+            <div class="meal-card-content">
+              <h4 class="meal-card-title">دجاج مشوي بالأعشاب</h4>
+              <p class="meal-card-desc">150g صدر دجاج متبل بالأعشاب الطازجة مع كينوا وخضار مشوية سوتيه.</p>
+              <div class="meal-macros-row">
+                <div class="macro-badge"><span>🔥</span> <span class="value">420 سعرة</span></div>
+                <div class="macro-badge"><span>💪</span> <span class="value">36g بروتين</span></div>
+                <div class="macro-badge"><span>🌾</span> <span class="value">32g كارب</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Meal 2 -->
+          <div class="meal-showcase-card" data-category="fish">
+            <div class="meal-card-img-wrap">
+              <img src="assets/images/meal_salmon.jpg" alt="سلمون مشوي بالليمون والأعشاب" loading="lazy">
+              <span class="meal-tag-category">مأكولات بحرية</span>
+            </div>
+            <div class="meal-card-content">
+              <h4 class="meal-card-title">سلمون مشوي بالليمون والأعشاب</h4>
+              <p class="meal-card-desc">150g فيليه سلمون نرويجي طازج مع مكعبات بطاطا حلوة مشوية وبروكلي سوتيه.</p>
+              <div class="meal-macros-row">
+                <div class="macro-badge"><span>🔥</span> <span class="value">520 سعرة</span></div>
+                <div class="macro-badge"><span>💪</span> <span class="value">40g بروتين</span></div>
+                <div class="macro-badge"><span>🌾</span> <span class="value">22g كارب</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Meal 3 -->
+          <div class="meal-showcase-card" data-category="beef">
+            <div class="meal-card-img-wrap">
+              <img src="assets/images/meal_beef.jpg" alt="كفتة لحم مشوية مع أرز بني" loading="lazy">
+              <span class="meal-tag-category">لحوم صافية</span>
+            </div>
+            <div class="meal-card-content">
+              <h4 class="meal-card-title">كفتة لحم مشوية مع أرز بني</h4>
+              <p class="meal-card-desc">150g كفتة لحم عجل خالية من الدهون مع أرز أسمر، طماطم مشوية وكوسا.</p>
+              <div class="meal-macros-row">
+                <div class="macro-badge"><span>🔥</span> <span class="value">480 سعرة</span></div>
+                <div class="macro-badge"><span>💪</span> <span class="value">34g بروتين</span></div>
+                <div class="macro-badge"><span>🌾</span> <span class="value">35g كارب</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Meal 4 -->
+          <div class="meal-showcase-card" data-category="salad">
+            <div class="meal-card-img-wrap">
+              <img src="assets/images/meal_salad.jpg" alt="سلطة كينوا بروتين مع حلوم" loading="lazy">
+              <span class="meal-tag-category">سلطات صحية</span>
+            </div>
+            <div class="meal-card-content">
+              <h4 class="meal-card-title">سلطة كينوا بروتين مع حلوم</h4>
+              <p class="meal-card-desc">سلطة حجم كبير مع جبنة حلوم مشوية خفيفة الدسم، أفوكادو، كينوا وإدامامي.</p>
+              <div class="meal-macros-row">
+                <div class="macro-badge"><span>🔥</span> <span class="value">350 سعرة</span></div>
+                <div class="macro-badge"><span>💪</span> <span class="value">22g بروتين</span></div>
+                <div class="macro-badge"><span>🌾</span> <span class="value">28g كارب</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Meal 5 -->
+          <div class="meal-showcase-card" data-category="chicken">
+            <div class="meal-card-img-wrap">
+              <img src="assets/images/food_experience.jpg" alt="دجاج ترياكي صحي" loading="lazy">
+              <span class="meal-tag-category">دجاج مشوي</span>
+            </div>
+            <div class="meal-card-content">
+              <h4 class="meal-card-title">دجاج ترياكي صحي مع سمسم</h4>
+              <p class="meal-card-desc">150g صدر دجاج بصوص ترياكي خفيف، فلفل ألوان وبروكلي وأرز بني.</p>
+              <div class="meal-macros-row">
+                <div class="macro-badge"><span>🔥</span> <span class="value">430 سعرة</span></div>
+                <div class="macro-badge"><span>💪</span> <span class="value">35g بروتين</span></div>
+                <div class="macro-badge"><span>🌾</span> <span class="value">38g كارب</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Meal 6 -->
+          <div class="meal-showcase-card" data-category="daily">
+            <div class="meal-card-img-wrap">
+              <img src="assets/images/variety_chicken.jpg" alt="كبسة دجاج صحية" loading="lazy">
+              <span class="meal-tag-category">وجبات أردنية</span>
+            </div>
+            <div class="meal-card-content">
+              <h4 class="meal-card-title">كبسة دجاج صحية مع دقوس</h4>
+              <p class="meal-card-desc">150g صدر دجاج مع أرز كبسة خالي من الدهون المهدرجة مع صلصة دقوس حارة.</p>
+              <div class="meal-macros-row">
+                <div class="macro-badge"><span>🔥</span> <span class="value">460 سعرة</span></div>
+                <div class="macro-badge"><span>💪</span> <span class="value">38g بروتين</span></div>
+                <div class="macro-badge"><span>🌾</span> <span class="value">42g كارب</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Meal 7 -->
+          <div class="meal-showcase-card" data-category="beef">
+            <div class="meal-card-img-wrap">
+              <img src="assets/images/meal_beef.jpg" alt="بيف ستروجانوف دايت" loading="lazy">
+              <span class="meal-tag-category">لحوم صافية</span>
+            </div>
+            <div class="meal-card-content">
+              <h4 class="meal-card-title">بيف ستروجانوف مع فطر طازج</h4>
+              <p class="meal-card-desc">150g لحم عجل بصلصة ستروجانوف خفيفة مع فطر وبصل وفلفل رومي وكارب صحي.</p>
+              <div class="meal-macros-row">
+                <div class="macro-badge"><span>🔥</span> <span class="value">470 سعرة</span></div>
+                <div class="macro-badge"><span>💪</span> <span class="value">37g بروتين</span></div>
+                <div class="macro-badge"><span>🌾</span> <span class="value">30g كارب</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Meal 8 -->
+          <div class="meal-showcase-card" data-category="fish">
+            <div class="meal-card-img-wrap">
+              <img src="assets/images/meal_salmon.jpg" alt="جمبري سويت تشيلي" loading="lazy">
+              <span class="meal-tag-category">مأكولات بحرية</span>
+            </div>
+            <div class="meal-card-content">
+              <h4 class="meal-card-title">جمبري سويت تشيلي خفيف</h4>
+              <p class="meal-card-desc">120g جمبري مع صلصة سويت تشيلي قليلة السكر، جزر، فلفل ألوان وبروكلي.</p>
+              <div class="meal-macros-row">
+                <div class="macro-badge"><span>🔥</span> <span class="value">380 سعرة</span></div>
+                <div class="macro-badge"><span>💪</span> <span class="value">32g بروتين</span></div>
+                <div class="macro-badge"><span>🌾</span> <span class="value">28g كارب</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center" style="margin-top: 20px;">
+          <button class="btn btn-primary btn-lg trigger-subscription-flow" data-plan-id="plan-m-2">
+            ابدأ باختيار وجباتك ضمن اشتراكك 🍱
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo-row">
+          <img src="assets/images/shi_healthy_logo.png" alt="شِ هيلثي" class="footer-logo-img">
+          <div>
+            <div class="footer-brand-title">شِ هيلثي | Shi Healthy</div>
+            <div style="font-size: 0.85rem; color: var(--lime-accent);">Healthy? اه. حرمان؟ لا.</div>
+          </div>
+        </div>
+        <p class="footer-brand-desc">أكل صحي، زاكي، ومتوازن... بطريقة أسهل تناسب روتينك وأهدافك البدنية في الأردن.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>صفحات الموقع</h4>
+        <ul class="footer-links-list">
+          <li><a href="index.html">الرئيسية</a></li>
+          <li><a href="subscriptions.html">الاشتراكات والأسعار</a></li>
+          <li><a href="meals.html">وجباتنا (المنيو)</a></li>
+          <li><a href="why-us.html">ليش شِ هيلثي؟ والأهداف</a></li>
+          <li><a href="how-it-works.html">كيف بنشتغل والتوصيل</a></li>
+          <li><a href="reviews-faq.html">آراء العملاء والأسئلة الشائعة</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>معلومات التواصل</h4>
+        <div class="footer-contact-info">
+          <div class="footer-contact-row">
+            <span>📞</span>
+            <div><strong>رقم الهاتف:</strong><br><a href="tel:0770071023" style="direction: ltr; display: inline-block;">0770071023</a></div>
+          </div>
+          <div class="footer-contact-row">
+            <span>📍</span>
+            <div><strong>الموقع:</strong><br>شفا بدران، شارع العرب، عمّان</div>
+          </div>
+          <div class="footer-contact-row">
+            <span>📸</span>
+            <div><strong>انستغرام:</strong><br><a href="https://instagram.com" target="_blank" rel="noopener">@shihealthy.jo</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <div>جميع الحقوق محفوظة © 2026 شِ هيلثي | Shi Healthy</div>
+      <div>Healthy food that fits real life 🌿</div>
+    </div>
+  </footer>
+
+  <!-- Mobile Sticky Bar -->
+  <div class="mobile-sticky-bar">
+    <button class="btn btn-primary trigger-subscription-flow" data-plan-id="plan-m-2">
+      🍱 ابدأ اشتراكك
+    </button>
+    <a href="https://wa.me/962770071023?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D8%B4%D9%90%20%D9%87%D9%8A%D9%84%D8%AB%D9%8A%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%A7%D9%84%D8%A7%D8%B4%D8%AA%D8%B1%D8%A7%D9%83%D8%A7%D8%AA" target="_blank" class="mobile-whatsapp-btn" aria-label="محادثة واتساب">💬</a>
+  </div>
+
+  <a href="https://wa.me/962770071023?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D8%B4%D9%90%20%D9%87%D9%8A%D9%84%D8%AB%D9%8A%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%A7%D9%84%D8%A7%D8%B4%D8%AA%D8%B1%D8%A7%D9%83%D8%A7%D8%AA" target="_blank" class="floating-whatsapp" aria-label="احكي معنا على واتساب">💬</a>
+
+  <!-- FLOW B Modal -->
+  <div class="modal-overlay" id="checkout-modal" role="dialog" aria-modal="true" aria-labelledby="modal-step-title">
+    <div class="checkout-modal-card">
+      <div class="modal-header">
+        <h3 id="modal-step-title">طلب اشتراك جديد 🍱</h3>
+        <button class="modal-close-btn" id="modal-close-btn" aria-label="إغلاق النافذة">✕</button>
+      </div>
+
+      <div class="stepper-progress-bar">
+        <div class="step-indicator active" data-step="1">
+          <div class="step-circle">1</div>
+          <span class="step-label">الاشتراك</span>
+        </div>
+        <div class="step-indicator" data-step="2">
+          <div class="step-circle">2</div>
+          <span class="step-label">الوجبات</span>
+        </div>
+        <div class="step-indicator" data-step="3">
+          <div class="step-circle">3</div>
+          <span class="step-label">البيانات</span>
+        </div>
+        <div class="step-indicator" data-step="4">
+          <div class="step-circle">4</div>
+          <span class="step-label">الدفع</span>
+        </div>
+        <div class="step-indicator" data-step="5">
+          <div class="step-circle">5</div>
+          <span class="step-label">التأكيد</span>
+        </div>
+      </div>
+
+      <div class="modal-body">
+        <div class="checkout-step-panel active" data-step="1">
+          <h4 style="font-size: 1.2rem; color: var(--primary-dark); margin-bottom: 6px;">الخطوة 1: حدد نوع الاشتراك</h4>
+          <p style="font-size: 0.95rem; color: var(--text-muted); margin-bottom: 16px;">اضغط على الخطة التي تناسب عدد وجباتك الشهري أو الأسبوعي:</p>
+          <div class="modal-plans-list" id="modal-plans-list-container"></div>
+        </div>
+
+        <div class="checkout-step-panel" data-step="2">
+          <h4 style="font-size: 1.2rem; color: var(--primary-dark); margin-bottom: 6px;">الخطوة 2: اختار وجباتك المفضلة</h4>
+          <p style="font-size: 0.95rem; color: var(--text-muted); margin-bottom: 16px;">حدد الوجبات التي ترغب بها، وسيقوم شيف شِ هيلثي بتجهيزها وتنسيق التوصيل حسب الخطة:</p>
+          <div class="meals-counter-bar" id="modal-meals-counter-bar"></div>
+          <div class="meals-selection-grid" id="modal-meals-grid"></div>
+        </div>
+
+        <div class="checkout-step-panel" data-step="3">
+          <h4 style="font-size: 1.2rem; color: var(--primary-dark); margin-bottom: 6px;">الخطوة 3: بيانات التوصيل والتواصل</h4>
+          <p style="font-size: 0.95rem; color: var(--text-muted); margin-bottom: 20px;">أدخل عنوانك بالتفصيل حتى يتم تنسيق خط التوصيل:</p>
+          <div class="lead-form-grid" style="margin-top: 0;">
+            <div>
+              <label for="cust-name" class="form-label">الاسم الكامل *</label>
+              <input type="text" id="cust-name" class="form-input" placeholder="اسمك الكريم" required>
+            </div>
+            <div>
+              <label for="cust-phone" class="form-label">رقم الهاتف *</label>
+              <input type="tel" id="cust-phone" class="form-input" placeholder="07XXXXXXXX" required>
+            </div>
+            <div>
+              <label for="cust-area" class="form-label">المنطقة في عمّان *</label>
+              <select id="cust-area" class="form-select" required>
+                <option value="">-- اختار منطقتك --</option>
+              </select>
+            </div>
+            <div>
+              <label for="cust-address" class="form-label">العنوان بالتفصيل *</label>
+              <input type="text" id="cust-address" class="form-input" placeholder="اسم الشارع، البناية، رقم الشقة">
+            </div>
+            <div class="form-group-full">
+              <label for="cust-notes" class="form-label">ملاحظات التوصيل أو الحساسية من أطعمة معينة</label>
+              <textarea id="cust-notes" class="form-textarea" rows="2" placeholder="أي تفاصيل خاصة بتسليم الوجبات أو تفضيلات النكهات"></textarea>
+            </div>
+          </div>
+          <div style="background-color: #FFF9E6; border: 1px solid #E5A823; padding: 10px 14px; border-radius: var(--radius-sm); font-size: 0.85rem; color: #7A5300; margin-top: 14px;">
+            * تذكير: تكلفة التوصيل لا تشمل سعر الاشتراك ويتم احتسابها بحسب المنطقة الجغرافية.
+          </div>
+        </div>
+
+        <div class="checkout-step-panel" data-step="4">
+          <h4 style="font-size: 1.2rem; color: var(--primary-dark); margin-bottom: 6px;">الخطوة 4: طريقة الدفع</h4>
+          <p style="font-size: 0.95rem; color: var(--text-muted); margin-bottom: 16px;">اختر وسيلة الدفع المعتمدة المناسبة لك:</p>
+          <div class="payment-options-list">
+            <label class="payment-option-row selected">
+              <input type="radio" name="payment_choice" value="cod" class="payment-radio" checked>
+              <div class="payment-title-wrap">
+                <h4>الدفع عند الاستلام (كاش) 💵</h4>
+                <p>تدفع عند استلام أول دفعة وجبات مباشرة للمندوب</p>
+              </div>
+            </label>
+            <label class="payment-option-row">
+              <input type="radio" name="payment_choice" value="card" class="payment-radio">
+              <div class="payment-title-wrap">
+                <h4>البطاقة الائتمانية (Visa / Mastercard) 💳</h4>
+                <p>رابط دفع إلكتروني آمن يتم إرساله إليك</p>
+              </div>
+            </label>
+            <label class="payment-option-row">
+              <input type="radio" name="payment_choice" value="cliq" class="payment-radio">
+              <div class="payment-title-wrap">
+                <h4>كليك والمحافظ الإلكترونية (CliQ / Zain Cash) 📱</h4>
+                <p>تحويل فوري عبر اسم المستخدم المعتمد</p>
+              </div>
+            </label>
+            <label class="payment-option-row">
+              <input type="radio" name="payment_choice" value="split" class="payment-radio">
+              <div class="payment-title-wrap">
+                <h4>الدفع مقسم على دفعتين 🔄</h4>
+                <p>متاح للاشتراكات الشهرية (دفعة عند البدء ودفعة في منتصف الشهر)</p>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <div class="checkout-step-panel" data-step="5">
+          <div class="order-success-box">
+            <div class="success-icon-animated">✓</div>
+            <h3 style="font-size: 1.6rem; color: var(--primary-dark); margin-bottom: 8px;">تم تسجيل طلبك بنجاح! 💚</h3>
+            <p style="font-size: 1.05rem; color: var(--text-muted);">
+              شكرًا لاختيارك <strong>شِ هيلثي</strong>. فريقنا سيقوم بمراجعة طلبك والتواصل معك لتأكيد موعد أول توصيل.
+            </p>
+            <div class="order-summary-card" id="order-summary-content"></div>
+            <div style="display: flex; flex-direction: column; gap: 12px; align-items: center;">
+              <a href="#" id="confirm-whatsapp-btn" target="_blank" class="btn btn-lime btn-lg" style="width: 100%;">
+                <span>💬</span> تأكيد الطلب مباشرة عبر واتساب
+              </a>
+              <button type="button" class="btn btn-secondary" onclick="document.getElementById('checkout-modal').classList.remove('open');">
+                إغلاق والعودة للمنيو
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary btn-sm" id="modal-prev-btn" style="display: none;">
+          → السابق
+        </button>
+        <button type="button" class="btn btn-primary btn-sm" id="modal-next-btn">
+          المتابعة لاختيار الوجبات ←
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
